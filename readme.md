@@ -6,15 +6,16 @@ cd  ~/mongodb/bin/
 
 ## 啟動 node express 
 
+`
 npm inti -u 
 
 npm install express 
-
+`
 ## 連線資料庫並建立model 
 專案裡用 JavaScript 撰寫 Mongoose 提供的語法，而 Mongoose 會在幫我們把這些語法翻譯成資料庫的操作語言
-
+`
 npm install mongoose 
-
+`
 建立連線
 
 建立model ( 這裡可以新增儲存數據庫的字段）
