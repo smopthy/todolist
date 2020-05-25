@@ -8,7 +8,7 @@ db.on('error',()=>{
 
 db.once('open' , ()=>{
     for(let i =0 ; i <10 ; i++){
-        Todo.create({name :'name-'+ i ,month_pay : 0})
+        Todo.create({name :'name-'+ i })
     }
 
     console.log('connecting')

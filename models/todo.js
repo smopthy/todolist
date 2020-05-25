@@ -8,10 +8,10 @@ const todoSchema = new Schema({
         type : String , 
         required : true // 是否為必要填寫項目 
     }
-    ,month_pay :{
-        type : Number , 
-        required : false
-    }
+    ,isDone :{
+        type :Boolean , 
+        default : false , // 設定預設狀態
+    } 
 })
 // collection  的名稱
 module.exports = mongoose.model('apple' , todoSchema)
