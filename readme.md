@@ -7,12 +7,20 @@ cd  ~/mongodb/bin/
 ## 啟動 node express 
 
 `
-npm inti -u 
+npm inti -ynode
 
 npm install express 
 `
 ## 連線資料庫並建立model 
-專案裡用 JavaScript 撰寫 Mongoose 提供的語法，而 Mongoose 會在幫我們把這些語法翻譯成資料庫的操作語言
+專案裡用 JavaScript 撰寫 Mongoose 提供的語法，而 Mongoose 會在幫我們把這些語法翻譯成資料庫的操作語言 
+
+啟動數據庫
+
+`
+cd ~/mongodb/bin/ 
+./mongod --dbpath /Users/smopthy/mongodb-data
+`
+
 `
 npm install mongoose 
 `
@@ -26,8 +34,6 @@ npm install mongoose
     views 資料夾
     在 views 底下新增 layouts 資料夾
     在 layouts 底下新增 main.hbs 檔案
-
-##  初步設置 crud 
 
 # 將種子資料顯示
 
@@ -45,7 +51,7 @@ npm install mongoose
 
 新增 get : route '/todos/new'
 建立新頁面 new 
-    當按入 新增鈕 導向 oute '/todos' 後再重新倒回 ‘/'
+    當按入 新增鈕 導向 route '/todos' 後再重新倒回 ‘/'
 
 
 ## 查看某一筆資料
@@ -81,6 +87,18 @@ npm install mongoose
 
 在‘/' 路由上面 新增
     .sort({_id:'asc'})
+
+
+
+# 修改restful 風格的route 
+
+`
+$ npm install method-override
+`
+
+
+
+
 
 ## 遇到無法使用 nodemon 
 npm uninstall nodemon 
