@@ -7,9 +7,9 @@ cd  ~/mongodb/bin/
 ## 啟動 node express 
 
 `
-npm inti -ynode
-
+npm inti -y 
 npm install express 
+npm install express-handlebars
 `
 ## 連線資料庫並建立model 
 專案裡用 JavaScript 撰寫 Mongoose 提供的語法，而 Mongoose 會在幫我們把這些語法翻譯成資料庫的操作語言 
@@ -95,10 +95,25 @@ npm install mongoose
 `
 $ npm install method-override
 `
+`
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+`
 
+# 重構路由器 
 
+* 維護 app.js 文件的易讀性
+* 關注點分離 (separation of concerns，SOC) 
 
+express 中有一個專門設定路由的組件：express.Route 
 
+`
+const router = express.Router()
+module.exports = router
+
+const 
+app.use(routes)
+`
 
 ## 遇到無法使用 nodemon 
 npm uninstall nodemon 

@@ -13,6 +13,6 @@ const todoSchema = new Schema({
         default : false , // 設定預設狀態
     } 
 })
-// collection  的名稱
-module.exports = mongoose.model('apple' , todoSchema)
+// collection  的名稱 
+module.exports = mongoose.model('todos' , todoSchema)
 

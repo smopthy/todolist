@@ -1,7 +1,18 @@
 <!---返回todos-->
 
-<form action ="/todos" method="POST"> 
-    <input type = "text" placeholder="name" name = "name">
-    <button type = "submit">Create</button>
 
-</form>
+        <form action="/todos" method="POST" style="display: inline;">       
+            <div class = "input-group">
+                {{!-- <div class = "input-group-prepend">
+                   <div class= "input-group-text">
+ 
+                   </div>
+                </div> --}}
+                <input class = "form-control" type = "text" placeholder="name" name="name" value = "{{todo.name}}" >
+                <div class ="input-group-append">
+
+                        <button class="btn btn-danger" type="submit">create</button>
+                </div>              
+             </div>     
+        </form>
+
